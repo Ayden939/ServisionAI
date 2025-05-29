@@ -1,0 +1,135 @@
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin: 20px auto;
+}
+
+#footer{
+    position: absolute;
+    background: var(--light);
+    bottom: 0;left: 0;right: 0;
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+.login-form input {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 300px;
+    box-sizing: border-box;
+    font-size: 16px;
+
+}
+
+input {
+    width: 200px;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 10px 10px 10px 0;
+    width: calc(100% - 10px);
+}
+
+.login-form button {
+    display: block;
+    padding: 10px 20px;
+    background: linear-gradient(to bottom right, #d8b4f8, #bfdbfe);
+    color: black;  
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    width: calc(100% - 10px);
+}
+
+#login-image {
+    background-color: white;
+    padding: 20px;
+    width: calc(100% - 200px);
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+    margin: 20px auto;
+    display: block;
+}
+
+#login-info {
+    font-size: 16px;
+    margin: 20px;
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+
+}
+
+#special-links{
+   
+    button{
+        margin: 10px 20px;
+        display: block;
+        background: linear-gradient(to bottom right, #d8b4f8, #bfdbfe);
+
+    }
+}
+#description {
+    font-size: 14px;
+    margin: 20px;
+    text-align: center;
+    color: #666;
+    font-weight: normal;
+}
+
+
+@media (max-width: 600px) {
+    #special-links {
+        display: none;
+    }
+}
+
+
+@media (min-width: 600px) {
+    #login-image {
+        margin: 20px;
+        width: calc(50% - 70px);
+        display: inline-block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        height: calc(100% - 80px);
+        background: white;
+    }
+
+
+    #login-container {
+        background-color: white;
+        position: absolute;
+        top: 0;
+        margin: 20px;
+
+        border-radius: 5px;
+        box-shadow: var(--shadow);
+        width: calc(50% - 30px);
+        left: 0;
+        bottom: 0;
+
+    }
+
+}
+h1{
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+    
+    text-transform: uppercase;
+}

@@ -1,0 +1,14 @@
+.datetime{
+    padding: 0px;
+    .rdrDateDisplayItem {
+        border: none;
+    }
+    input{
+        box-shadow: none;
+
+    }
+    button{
+        box-shadow:none;
+    }
+}
+

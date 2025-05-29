@@ -1,0 +1,89 @@
+#analytics{
+
+
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+
+    .selector{
+        width: 25%;
+    }
+
+    .selector-container{
+        padding: 30px;
+        display: grid;
+        text-align: -webkit-left;
+        margin-left: 20px;
+
+    }
+
+    .charts-container{
+        width: 75%;
+        text-align: -webkit-center;
+        margin-bottom: 50px;
+    }
+
+    .charts{
+        div{
+            margin:20px;
+            padding: 20px 40px;
+            height: unset;
+            width: unset;
+        }
+        
+    }
+
+    .recharts-wrapper {
+        /* background-color: #1e1e1e; */
+        border-radius: 5px;
+        /* border: 2px solid black; */
+        /* padding: 20px; */
+        /* margin: 20px 0; */
+        /* box-shadow: var(--shadow); */
+    }
+
+    .recharts-cartesian-grid line {
+        stroke: #444 !important;
+    }
+
+    .recharts-responsive-container {
+        margin-bottom:50px;
+    }
+
+    .grab{
+        /* background: var(--red); */
+        padding: 5px;
+        min-height: 10px;
+        color: white;
+        /* box-shadow: var(--shadow); */
+        border-radius: 5px;
+        text-align: center;
+    }
+    
+    .grab-task-btn , .timeButtons{
+        background: linear-gradient(to bottom right, #d8b4f8, #bfdbfe);
+
+        color:black;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        cursor: pointer; 
+        border-radius: 5px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        transition: all 0.2s ease-in-out;
+    }
+    
+    
+    .timeButtons{
+        margin: 10px;
+    }
+
+    .averages{
+        margin: 20px 40px;
+    }
+    
+
+}

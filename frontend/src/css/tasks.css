@@ -1,0 +1,134 @@
+#tasks {
+text-align: center;
+    #tasks-container {
+        .no-tasks {
+            margin: 20px;
+            font-size: 12px;
+        }
+
+        overflow: scroll;
+        padding: 0 20px;
+        width: 320px;
+        margin: 0px auto;
+    }
+
+
+
+    .task {
+
+        i {
+            font-size: 20px;
+        }
+
+        font-size: 12px;
+
+        box-shadow: var(--shadow);
+        margin: 20px auto;
+        position: relative;
+        height: 380px;
+        border-radius: 5px;
+
+
+
+        img {
+            width: 100%;
+            border-radius: 5px 5px 0px 0px;
+        }
+
+        .task-info {
+            font-size: 12px;
+            text-align: left;
+            position: relative;
+            height: 100px;
+            margin: 10px;
+        }
+
+        .points {
+            position: absolute;
+            left: 0;
+            top: 0px;
+            color: black;
+    
+        }
+        .task-desc{
+            position: absolute;
+            bottom: 40px;
+            left: 0px;
+            right: 0px;
+        }
+
+        .timer {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+
+
+            i {
+                margin-left: 5px;
+            }
+        }
+
+
+        button {
+            margin-right: 10px;
+       
+        }
+
+        #confirm-button {
+            position: absolute;
+            right: 0;
+            bottom: 10px;
+            color: black;
+            background: linear-gradient(to bottom right, #d8b4f8, #bfdbfe);
+
+            i {
+                margin: 0 5px 0 0;
+            }
+        }
+
+        #dismiss-button {
+            i {
+                margin: 0 5px 0 0;
+            }
+            bottom: 10px;
+            position: absolute;
+            left: 10px;
+            background: linear-gradient(to bottom right, #d8b4f8, #bfdbfe);
+        }
+
+
+    }
+}
+
+@media (min-width: 600px) {
+    #tasks {
+        width: calc(100% - 600px);
+        padding: 10px;
+        max-height: calc(100vh - 20px);
+        overflow: scroll;
+
+        #tasks-container {
+            width: unset;
+            margin: unset;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 10px;
+            flex-direction: row;
+            align-content: flex-start;
+    
+            .task {
+                flex: 1 1 200px;
+                max-width: 300px;
+                margin: 0;
+    
+                height: 350px;
+            }
+        }
+
+    }
+
+  
+}

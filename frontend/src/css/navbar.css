@@ -1,0 +1,40 @@
+/* src/components/Navbar.css */
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:var(--theme);
+    color: white;
+    padding: 10px 20px;
+    width:200px;
+    font-size: 14px;
+    text-transform: uppercase;
+    box-shadow: var(--shadow);
+  }
+  ul{
+    margin: 0;padding: 0;
+  }
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+
+    i{
+      font-size: 20px;
+      margin-right: 5px ;
+    }
+ 
+  }
+  
+  .navbar-links li a {
+    color: white;
+    text-decoration: none;
+    &.active{
+      color:black;
+    }
+  }
+  
+  .navbar-links li a:hover {
+    text-decoration: underline;
+  }
+  

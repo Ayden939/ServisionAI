@@ -1,0 +1,79 @@
+#login {
+  padding-bottom: 200px;
+}
+
+@media (min-width: 600px) {
+
+  #desktop-mode {
+    display: flex;
+    align-items: start;
+    
+  }
+  #login{
+    padding-bottom: unset;
+  }
+
+}
+
+
+
+
+#bottom-bar {
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  z-index: 1000;
+  box-shadow: var(--shadow);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: fit-content;
+  border-radius: 5px;
+  margin: 20px auto;
+  padding: 0px 10px;
+  padding-bottom: 5px;
+
+
+
+
+  button {
+    mix-blend-mode: difference;
+    color: white;
+    box-shadow: none;
+    width: 70px;
+    transition: .3s;
+    padding: 0;
+    margin: 5px;
+
+    .icon {
+      font-size: 20px;
+      margin: 5px;
+    }
+
+    .text {
+      margin: 5px;
+    }
+
+    i {
+      font-size: 20px;
+      color: white;
+
+      margin-right: 5px;
+      background: linear-gradient(to bottom right, #d8b4f8, #bfdbfe);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    &.active {
+
+      i {
+        font-size: 30px;
+      }
+
+      .text {
+        display: none;
+      }
+    }
+  }
+}

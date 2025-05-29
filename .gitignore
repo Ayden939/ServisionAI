@@ -1,0 +1,14 @@
+*.jpg
+
+cert.bat
+*.pem
+ips.txt
+
+*.crt
+
+__pycache__
+
+node_modules
+
+
+imgs

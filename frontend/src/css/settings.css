@@ -1,0 +1,47 @@
+#settings {
+    margin: 20px;
+    text-transform: uppercase;
+
+    .user-info {
+        margin-bottom: 20px;
+        text-align: center;
+
+        font-size: 12px;
+
+        i {
+            font-size: 20px;
+            margin: 0 10px;
+        }
+
+
+    }
+
+    button {
+        
+        i {
+            margin-right: 5px;
+
+        }
+
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    #notifications-button, #logout {
+        background: linear-gradient(to bottom right, #d8b4f8, #bfdbfe);
+    }
+
+
+
+
+}
+
+@media (min-width: 600px) {
+    #settings {
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: var(--shadow);
+        background: white;
+        width: 250px;
+    }
+}

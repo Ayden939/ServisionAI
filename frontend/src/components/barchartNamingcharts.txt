@@ -1,0 +1,22 @@
+import React from 'react';
+import { BarChart, Bar, XAxis, YAxis } from 'recharts';
+
+const data = [
+  { name: "Page A", uv: 400, pv: 2400, amt: 2400 },
+  { name: "Page B", uv: 500, pv: 1300, amt: 2000 },
+  { name: "Page C", uv: 300, pv: 1600, amt: 2800 },
+  { name: "Page D", uv: 300, pv: 3000, amt: 3600 },
+  { name: "Page E", uv: 400, pv: 1300, amt: 2900 },
+];
+
+const MyChart = () => {
+  return (
+    <BarChart width={730} height={250} data={data}>
+      <XAxis dataKey="name" label={{ value: "Page Name", fill: "red", fontSize: "16px" }} />
+      <YAxis label={{ value: "Value", fill: "blue", fontSize: "16px" }} />
+      <Bar dataKey="uv" fill="#8884d8" />
+    </BarChart>
+  );
+};
+
+export default MyChart;

@@ -1,0 +1,54 @@
+:root {
+    --shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
+    --inset-shadow: #000 1px 1px 3px 0 inset;
+    --theme: #7E57C2;
+    --yellow: #ffee58;
+    --blue: #42a5f5;
+    --green: #66bb6a;
+    --red: #ef5350;
+    --secondary-font: "Lato", sans-serif;
+    --primary-font: "Roboto", sans-serif;
+    --light: #f0f0f0;
+}
+
+body {
+    margin: 0;
+    padding:0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    font-family: var(--secondary-font);
+    height: 100vh;
+    
+
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+button {
+    font-size: 10px;
+    font-family: var(--secondary-font);
+    color: black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background: none;
+    border: none;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    text-transform: uppercase;
+
+    
+}
+
+input {
+    border: none;
+    box-shadow: var(--inset-shadow);
+    border-radius: 5px;
+    outline: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}

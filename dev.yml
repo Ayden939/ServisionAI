@@ -1,0 +1,102 @@
+services:
+  mariadb:
+    image: mariadb:latest
+    container_name: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: mydb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    volumes:
+      - ./db-init:/docker-entrypoint-initdb.d
+      - mariadb-data:/var/lib/mysql
+    networks: 
+      - x_network
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: phpmyadmin
+    environment:
+      PMA_HOST: mariadb
+      PMA_USER: root
+      PMA_PASSWORD: rootpassword
+    networks:
+      - x_network
+
+  node-server:
+    build: ./node-server
+    depends_on:
+      - mariadb
+    container_name: node-server
+    restart: always
+    expose:
+      - "5000"
+    volumes:
+      - ./node-server:/app
+      - /app/node_modules/ 
+    environment:
+      NODE_ENV: development
+      DB_HOST: mariadb
+      DB_USER: user
+      DB_PASSWORD: password
+      DB_NAME: mydb
+    command: ["npm", "run", "dev"]
+    networks:
+      - x_network
+
+  flask-server:
+    build: ./flask-server
+    container_name: flask-server
+    restart: always
+    expose:
+      - "8000"
+    volumes:
+      - ./flask-server:/app
+    environment:
+      FLASK_ENV: development
+      DB_HOST: mariadb
+      DB_USER: user
+      DB_PASSWORD: password
+      DB_NAME: mydb
+    networks:
+      - x_network
+
+  frontend:
+    build: ./frontend
+    container_name: react-frontend
+    restart: always
+    expose:
+      - "5173"
+    volumes:
+      - ./frontend:/app 
+      - /app/node_modules 
+    command: ["npm", "run", "dev"]  
+    networks:
+      - x_network
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/dev.conf:/etc/nginx/conf.d/dev.conf
+      - ./certs/mkcerts:/etc/nginx/ssl
+      - ./nginx/public:/usr/share/nginx/html/public
+    networks:
+      - x_network
+
+networks:
+  x_network:
+    name: x_network 
+    driver: bridge
+
+volumes:
+  mariadb-data:
+    driver: local
+  
+
+
